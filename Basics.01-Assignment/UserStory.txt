@@ -1,0 +1,6 @@
+.1 Spin Nodejs-driven Server on port 3000
+.2 Handle two Routes : "/" and "/users"
+.2a Return greeting on "/"
+.2b Return a list of dummy users (eg <ul><li>User 1</li></ul>)
+.3 Add a form with a username <input> to the "/" page and submit a post request to "/create-user" upon a button click
+.4 add the "/create-user" route and parse the incoming data (eg the username) and simply log it to console.
