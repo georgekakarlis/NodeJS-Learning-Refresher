@@ -18,6 +18,7 @@ const server = http.createServer((req, res) => {
       body.push(chunk);
     });
     req.on('end', () => {
+      // parsing Request Bodies Async
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split('=')[1];
       fs.writeFileSync('message.txt', message);
