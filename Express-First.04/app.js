@@ -1,4 +1,4 @@
-
+//general note : always travelling top-to-bottom and the middlewares always work like that
 const http = require('http')
 const express = require('express')
 
@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     console.log('midleware2')
-    
+    res.send('<h1>hello froms express</h1>'); //res.send() and send in general also .send() sets headers in html automatically
 })
 
 const server = http.createServer(app)
