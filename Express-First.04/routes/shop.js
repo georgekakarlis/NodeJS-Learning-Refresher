@@ -1,10 +1,13 @@
 const express = require('express')
+const path = require('path')
+
+const rootDir = require('../utils/path')
 
 const router = express.Router();
 
 app.get('/', (req, res, next) => {
     console.log('midleware2')
-    res.send('<h1>hello froms express</h1>'); //res.send() and send in general also .send() sets headers in html automatically
+    res.sendFile(path.join(rootDir, 'views', 'shop.html'));
 })
 
 module.exports = router;
